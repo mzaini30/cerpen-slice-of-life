@@ -1,0 +1,11 @@
+---
+layout: default
+section: index
+---
+
+<div class="list-group">
+	{% assign postingan = site.posts | sort: 'title' %}
+	{% for x in postingan %}
+		<a href="{{ site.url }}{{ x.url }}" data-url='{{ x.url }}' class="list-group-item">{{ x.title }}</a>
+	{% endfor %}
+</div>

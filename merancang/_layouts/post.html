@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="medium">
+	<p class="text-center">
+		<strong>{{ page.title }}</strong>
+		<br>
+		<em>oleh <a href='http://cerpenmu.com/penulis/{{ page.author | replace: " ", "-" | replace: "'", "" | downcase }}'>{{ page.author }}</a></em>
+	</p>
+	<hr>
+	{{ content }}
+	{% if page.about %}
+		<p>
+			<div class="alert alert-success">{{ page.about | replace: '|', '<br><br>'}}</div>
+		</p>
+	{% endif %}
+</div>
